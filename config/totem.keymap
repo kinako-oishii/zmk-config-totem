@@ -88,10 +88,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                                               &kp Q            &kp W       &kp F        &kp P        &kp B        &kp J    &kp L        &kp U        &kp Y       &kp SINGLE_QUOTE
-                                               &mt LEFT_META A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G        &kp M    &mt RSHFT N  &mt RCTRL E  &mt RALT I  &mt RIGHT_META O
-&mt LS(LA(LC(LEFT_META))) LANG_ZENKAKUHANKAKU  &kp Z            &kp X       &kp C        &kp D        &kp V        &kp K    &kp H        &kp COMMA    &kp DOT     &kp FSLH          &kp RS(RA(RC(RIGHT_META)))
-                                                                            &kp ESC      &lt 2 TAB    &kp SPACE    &kp RET  &lt 2 ESC    &kp BSPC
+                                               &kp Q            &kp W       &kp F        &kp P        &kp B        &kp J        &kp L            &kp U         &kp Y       &kp SINGLE_QUOTE
+                                               &mt LEFT_META A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G        &kp M        &mt RSHFT N      &mt RCTRL E   &mt RALT I  &mt RIGHT_META O
+&mt LS(LA(LC(LEFT_META))) LANG_ZENKAKUHANKAKU  &lt 3 Z          &kp X       &kp C        &kp D        &kp V        &kp K        &kp H            &kp COMMA     &kp DOT     &lt 3 SLASH       &kp RS(RA(RC(RIGHT_META)))
+                                                                            &lt 4 ESC    &lt 1 SPACE  &lt 2 TAB    &lt 6 ENTER  &lt 5 BACKSPACE  &lt 7 DELETE
             >;
         };
 
