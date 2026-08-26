@@ -67,16 +67,6 @@
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-        navigation {
-            label = "NAV";
-            bindings = <
-                           &none          &none         &none      &none           &none    &kp K_REDO  &kp K_PASTE    &kp K_COPY     &kp K_CUT    &kp K_UNDO
-                           &kp LEFT_META  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &none    &kp CAPS    &kp LEFT       &kp DOWN       &kp UP       &kp RIGHT
-&kp LS(LA(LC(LEFT_META)))  &none          &none         &none      &none           &none    &kp INS     &kp HOME       &kp PAGE_DOWN  &kp PAGE_UP  &kp END     &none
-                                                        &none      &none           &none    &kp ENTER   &kp BACKSPACE  &kp DELETE
-            >;
-        };
-
         base_layer {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 
@@ -101,6 +91,16 @@
             >;
         };
 
+        navigation {
+            label = "NAV";
+            bindings = <
+                           &none          &none         &none      &none           &none    &kp K_REDO  &kp K_PASTE    &kp K_COPY     &kp K_CUT    &kp K_UNDO
+                           &kp LEFT_META  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &none    &kp CAPS    &kp LEFT       &kp DOWN       &kp UP       &kp RIGHT
+&kp LS(LA(LC(LEFT_META)))  &none          &none         &none      &none           &none    &kp INS     &kp HOME       &kp PAGE_DOWN  &kp PAGE_UP  &kp END     &none
+                                                        &none      &none           &none    &kp ENTER   &kp BACKSPACE  &kp DELETE
+            >;
+        };
+
         button {
             bindings = <
                            &kp K_UNDO     &kp K_CUT     &kp K_COPY  &kp K_PASTE     &kp K_REDO    &kp K_REDO  &kp K_PASTE      &kp K_COPY  &kp K_CUT      &kp K_UNDO
@@ -110,6 +110,16 @@
             >;
 
             label = "BUT";
+        };
+
+        mouse {
+            label = "MOUSE";
+            bindings = <
+                           &none          &none         &none      &none           &none    &kp K_REDO  &kp K_PASTE     &kp K_COPY      &kp K_CUT        &kp K_UNDO
+                           &kp LEFT_META  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &none    &none       &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mmv MOVE_RIGHT
+&kp LS(LA(LC(LEFT_META)))  &none          &none         &none      &none           &none    &none       &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP     &msc SCRL_RIGHT  &none
+                                                        &none      &none           &none    &mkp RCLK   &mkp LCLK       &mkp MCLK
+            >;
         };
     };
 };
