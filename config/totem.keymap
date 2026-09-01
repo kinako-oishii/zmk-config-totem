@@ -62,10 +62,22 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <170>;
-            quick-tap-ms = <150>;
-            require-prior-idle-ms = <150>;
+            tapping-term-ms = <190>;
+            quick-tap-ms = <170>;
+            require-prior-idle-ms = <170>;
             flavor = "tap-preferred";
+        };
+
+        double_tap_layer: double_tap_layer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "DOUBLE_TAP_LAYER";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <190>;
+            quick-tap-ms = <170>;
+            require-prior-idle-ms = <170>;
         };
     };
 
@@ -91,10 +103,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                                               &kp Q            &kp W       &kp F        &kp P        &kp B        &kp J        &kp L            &kp U         &kp Y       &kp SINGLE_QUOTE
-                                               &mt LEFT_META A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G        &kp M        &mt RSHFT N      &mt RCTRL E   &mt RALT I  &mt RIGHT_META O
-&mt LS(LA(LC(LEFT_META))) LANG_ZENKAKUHANKAKU  &lt 3 Z          &kp X       &kp C        &kp D        &kp V        &kp K        &kp H            &kp COMMA     &kp DOT     &lt 3 SLASH       &kp RS(RA(RC(RIGHT_META)))
-                                                                            &lt 4 ESC    &lt 1 SPACE  &lt 2 TAB    &lt 6 ENTER  &lt 5 BACKSPACE  &lt 7 DELETE
+                                                       &kp Q                    &kp W               &kp F                    &kp P                      &kp B                      &kp J                      &kp L                          &kp U                       &kp Y               &kp SINGLE_QUOTE
+                                                       &double_tap LEFT_META A  &double_tap LALT R  &double_tap LCTRL S      &double_tap LSHFT T        &kp G                      &kp M                      &double_tap RSHFT N            &double_tap RCTRL E         &double_tap RALT I  &double_tap RIGHT_META O
+&double_tap LS(LA(LC(LEFT_META))) LANG_ZENKAKUHANKAKU  &double_tap_layer 3 Z    &kp X               &kp C                    &kp D                      &kp V                      &kp K                      &kp H                          &kp COMMA                   &kp DOT             &double_tap_layer 3 SLASH  &kp RS(RA(RC(RIGHT_META)))
+                                                                                                    &double_tap_layer 4 ESC  &double_tap_layer 1 SPACE  &double_tap_layer 2 TAB    &double_tap_layer 6 ENTER  &double_tap_layer 5 BACKSPACE  &double_tap_layer 7 DELETE
             >;
         };
 
