@@ -29,16 +29,49 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_esc {
-            timeout-ms = <50>;
-            key-positions = <0 1>;
-            bindings = <&kp ESC>;
+        to_game {
+            bindings = <&to 8>;
+            key-positions = <20 31>;
         };
 
-        combo_tvp {
-            timeout-ms = <100>;
-            key-positions = <11 12 13>;
-            bindings = <&tog 2>;
+        lmet {
+            bindings = <&kp LMETA>;
+            key-positions = <10 11>;
+        };
+
+        rmet {
+            bindings = <&kp RMETA>;
+            key-positions = <19 18>;
+        };
+
+        lalt {
+            bindings = <&kp LALT>;
+            key-positions = <11 12>;
+        };
+
+        ralt {
+            bindings = <&kp RALT>;
+            key-positions = <18 17>;
+        };
+
+        lctl {
+            bindings = <&kp LCTRL>;
+            key-positions = <12 13>;
+        };
+
+        rctl {
+            bindings = <&kp RCTRL>;
+            key-positions = <17 16>;
+        };
+
+        lsft {
+            bindings = <&kp LSHFT>;
+            key-positions = <14 13>;
+        };
+
+        rsft {
+            bindings = <&kp RSHFT>;
+            key-positions = <15 16>;
         };
     };
 
@@ -56,9 +89,9 @@
     };
 
     behaviors {
-        double_tap: double_tap {
+        dpm: doubletap_passthrough_mod {
             compatible = "zmk,behavior-hold-tap";
-            label = "DOUBLE_TAP";
+            label = "DOUBLETAP_PASSTHROUGH_MOD";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -68,9 +101,9 @@
             flavor = "tap-preferred";
         };
 
-        double_tap_layer: double_tap_layer {
+        dpl: doubletap_passthrough_layer {
             compatible = "zmk,behavior-hold-tap";
-            label = "DOUBLE_TAP_LAYER";
+            label = "DOUBLETAP_PASSTHROUGH_LAYER";
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
@@ -78,6 +111,13 @@
             tapping-term-ms = <190>;
             quick-tap-ms = <170>;
             require-prior-idle-ms = <170>;
+        };
+
+        dctbl: doubletap_change_to_base_layer {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DOUBLETAP_CHANGE_TO_BASE_LAYER";
+            #binding-cells = <0>;
+            bindings = <&none>, <&to 0>;
         };
     };
 
@@ -103,10 +143,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                                                       &kp Q                    &kp W               &kp F                    &kp P                      &kp B                      &kp J                      &kp L                          &kp U                       &kp Y               &kp SINGLE_QUOTE
-                                                       &double_tap LEFT_META A  &double_tap LALT R  &double_tap LCTRL S      &double_tap LSHFT T        &kp G                      &kp M                      &double_tap RSHFT N            &double_tap RCTRL E         &double_tap RALT I  &double_tap RIGHT_META O
-&double_tap LS(LA(LC(LEFT_META))) LANG_ZENKAKUHANKAKU  &double_tap_layer 3 Z    &kp X               &kp C                    &kp D                      &kp V                      &kp K                      &kp H                          &kp COMMA                   &kp DOT             &double_tap_layer 3 SLASH  &kp RS(RA(RC(RIGHT_META)))
-                                                                                                    &double_tap_layer 4 ESC  &double_tap_layer 1 SPACE  &double_tap_layer 2 TAB    &double_tap_layer 6 ENTER  &double_tap_layer 5 BACKSPACE  &double_tap_layer 7 DELETE
+                                                &kp Q             &kp W        &kp F         &kp P         &kp B         &kp J         &kp L             &kp U          &kp Y        &kp SINGLE_QUOTE
+                                                &dpm LEFT_META A  &dpm LALT R  &dpm LCTRL S  &dpm LSHFT T  &kp G         &kp M         &dpm RSHFT N      &dpm RCTRL E   &dpm RALT I  &dpm RIGHT_META O
+&dpm LS(LA(LC(LEFT_META))) LANG_ZENKAKUHANKAKU  &dpl 3 Z          &kp X        &kp C         &kp D         &kp V         &kp K         &kp H             &kp COMMA      &kp DOT      &dpl 3 SLASH       &kp RS(RA(RC(RIGHT_META)))
+                                                                               &dpl 4 ESC    &dpl 1 SPACE  &dpl 2 TAB    &dpl 6 ENTER  &dpl 5 BACKSPACE  &dpl 7 DELETE
             >;
         };
 
@@ -179,6 +219,17 @@
 &kp ESC  &kp F10  &kp F1  &kp F2     &kp F3     &kp PAUSE_BREAK    &none  &none            &none      &none          &none           &kp RS(RA(RC(RIGHT_META)))
                           &kp K_APP  &kp SPACE  &kp TAB            &none  &none            &none
             >;
+        };
+
+        game {
+            bindings = <
+        &kp Q      &kp E     &kp W    &kp F      &kp SLASH    &none  &none  &none  &none  &none
+        &kp LCTRL  &kp A     &kp S    &kp D      &kp T        &none  &none  &none  &none  &none
+&dctbl  &kp LSHFT  &kp LALT  &none    &kp F5     &kp TAB      &none  &none  &none  &none  &none  &none
+                             &kp ESC  &kp SPACE  &none        &none  &none  &none
+            >;
+
+            label = "GAME";
         };
     };
 };
