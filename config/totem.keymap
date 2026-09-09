@@ -35,37 +35,37 @@
             layers = <0>;
         };
 
-        lmet {
+        lalt {
             bindings = <&kp LALT>;
             key-positions = <10 11>;
             layers = <0>;
         };
 
-        rmet {
+        ralt {
             bindings = <&kp RALT>;
             key-positions = <19 18>;
             layers = <0>;
         };
 
-        lalt {
+        lctl {
             bindings = <&kp LCTRL>;
             key-positions = <11 12>;
             layers = <0>;
         };
 
-        ralt {
+        rctl {
             bindings = <&kp RCTRL>;
             key-positions = <18 17>;
             layers = <0>;
         };
 
-        lctl {
+        lsft {
             bindings = <&kp LSHFT>;
             key-positions = <12 13>;
             layers = <0>;
         };
 
-        rctl {
+        rsft {
             bindings = <&kp RSHFT>;
             key-positions = <17 16>;
             layers = <0>;
