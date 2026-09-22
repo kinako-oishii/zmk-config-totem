@@ -38,37 +38,37 @@
         lalt {
             bindings = <&kp LALT>;
             key-positions = <10 11>;
-            layers = <0>;
+            layers = <0 9>;
         };
 
         ralt {
             bindings = <&kp RALT>;
             key-positions = <19 18>;
-            layers = <0>;
+            layers = <0 9>;
         };
 
         lctl {
             bindings = <&kp LCTRL>;
             key-positions = <11 12>;
-            layers = <0>;
+            layers = <0 9>;
         };
 
         rctl {
             bindings = <&kp RCTRL>;
             key-positions = <18 17>;
-            layers = <0>;
+            layers = <0 9>;
         };
 
         lsft {
             bindings = <&kp LSHFT>;
             key-positions = <12 13>;
-            layers = <0>;
+            layers = <0 9>;
         };
 
         rsft {
             bindings = <&kp RSHFT>;
             key-positions = <17 16>;
-            layers = <0>;
+            layers = <0 9>;
         };
     };
 
@@ -225,6 +225,16 @@
             >;
 
             label = "MINECRAFT";
+        };
+
+        gd_editor {
+            label = "GD_EDITOR";
+            bindings = <
+        &kp Q          &kp Q     &kp W       &kp E      &kp DELETE      &none  &none  &none  &none  &none
+        &kp Z          &kp A     &kp S       &kp D      &kp T           &none  &none  &none  &none  &none
+&dctbl  &kp LS(LC(Z))  &kp LALT  &none       &kp F5     &kp TAB         &none  &none  &none  &none  &none  &none
+                                 &kp LSHIFT  &kp LCTRL  &kp LEFT_ALT    &none  &none  &none
+            >;
         };
     };
 };
