@@ -30,7 +30,7 @@
         compatible = "zmk,combos";
 
         to_game {
-            bindings = <&to 8>;
+            bindings = <&to 10>;
             key-positions = <20 31>;
             layers = <0>;
         };
@@ -38,41 +38,41 @@
         lalt {
             bindings = <&kp LALT>;
             key-positions = <10 11>;
-            layers = <0 9 10>;
+            layers = <0 1 2>;
         };
 
         ralt {
             bindings = <&kp RALT>;
             key-positions = <19 18>;
-            layers = <0 9 10>;
+            layers = <0 1 2>;
         };
 
         lctl {
             bindings = <&kp LCTRL>;
             key-positions = <11 12>;
-            layers = <0 9 10>;
+            layers = <0 1 2>;
         };
 
         rctl {
             bindings = <&kp RCTRL>;
             key-positions = <18 17>;
-            layers = <0 9 10>;
+            layers = <0 1 2>;
         };
 
         lsft {
             bindings = <&kp LSHFT>;
             key-positions = <12 13>;
-            layers = <0 9 10>;
+            layers = <0 1 2>;
         };
 
         rsft {
             bindings = <&kp RSHFT>;
             key-positions = <17 16>;
-            layers = <0 9 10>;
+            layers = <0 1 2>;
         };
 
         to_editor {
-            bindings = <&to 9>;
+            bindings = <&to 1>;
             key-positions = <32 33 34 35 36 37>;
             layers = <0>;
         };
@@ -156,8 +156,28 @@
             bindings = <
                                                 &kp Q             &kp W        &kp F         &kp P         &kp B         &kp J         &kp L             &kp U          &kp Y        &kp SINGLE_QUOTE
                                                 &dpm LEFT_META A  &dpm LALT R  &dpm LCTRL S  &dpm LSHFT T  &kp G         &kp M         &dpm RSHFT N      &dpm RCTRL E   &dpm RALT I  &dpm RIGHT_META O
-&dpm LS(LA(LC(LEFT_META))) LANG_ZENKAKUHANKAKU  &dpl 3 Z          &kp X        &kp C         &kp D         &kp V         &kp K         &kp H             &kp COMMA      &kp DOT      &dpl 3 SLASH       &kp RS(RA(RC(RIGHT_META)))
-                                                                               &dpl 4 ESC    &dpl 1 SPACE  &dpl 2 TAB    &dpl 6 ENTER  &dpl 5 BACKSPACE  &dpl 7 DELETE
+&dpm LS(LA(LC(LEFT_META))) LANG_ZENKAKUHANKAKU  &dpl 5 Z          &kp X        &kp C         &kp D         &kp V         &kp K         &kp H             &kp COMMA      &kp DOT      &dpl 5 SLASH       &kp RS(RA(RC(RIGHT_META)))
+                                                                               &dpl 6 ESC    &dpl 3 SPACE  &dpl 4 TAB    &dpl 8 ENTER  &dpl 7 BACKSPACE  &dpl 9 DELETE
+            >;
+        };
+
+        gd_editor {
+            label = "GD_EDITOR";
+            bindings = <
+               &kp H  &kp Q  &kp W        &kp E             &kp DELETE           &none  &none  &none  &none  &none
+               &kp Z  &kp A  &kp S        &kp D             &kp P                &none  &none  &none  &none  &none
+&dpm LSHIFT U  &kp R  &kp G  &kp C        &kp V             &kp F3               &none  &none  &none  &none  &none  &dctbl
+                             &hl ENTER 2  &dpm LCTRL SPACE  &dpm LEFT_ALT TAB    &mo 8  &mo 7  &mo 9
+            >;
+        };
+
+        gd_editor_2 {
+            label = "GD_EDITOR_2";
+            bindings = <
+                  &kp SLASH  &kp ASTERISK     &kp RIGHT_BRACKET  &kp SQT     &kp SEMICOLON    &none   &none   &none   &none  &none
+                  &kp COLON  &kp N            &kp M              &kp PERIOD  &kp T            &none   &none   &none   &none  &none
+&dpm LSHFT CARET  &kp TILDE  &kp EXCLAMATION  &kp AT_SIGN        &kp HASH    &kp PIPE         &none   &none   &none   &none  &none  &dctbl
+                                              &trans             &trans      &trans           &trans  &trans  &trans
             >;
         };
 
@@ -241,26 +261,6 @@
             >;
 
             label = "MINECRAFT";
-        };
-
-        gd_editor {
-            label = "GD_EDITOR";
-            bindings = <
-               &kp H  &kp Q  &kp W         &kp E             &kp DELETE           &none  &none  &none  &none  &none
-               &kp Z  &kp A  &kp S         &kp D             &kp P                &none  &none  &none  &none  &none
-&dpm LSHIFT U  &kp R  &kp G  &kp C         &kp V             &kp F3               &none  &none  &none  &none  &none  &dctbl
-                             &hl ENTER 10  &dpm LCTRL SPACE  &dpm LEFT_ALT TAB    &mo 6  &mo 5  &mo 7
-            >;
-        };
-
-        gd_editor_2 {
-            label = "GD_EDITOR_2";
-            bindings = <
-                  &kp SLASH  &kp ASTERISK     &kp RIGHT_BRACKET  &kp SQT     &kp SEMICOLON    &none   &none   &none   &none  &none
-                  &kp COLON  &kp N            &kp M              &kp PERIOD  &kp T            &none   &none   &none   &none  &none
-&dpm LSHFT CARET  &kp TILDE  &kp EXCLAMATION  &kp AT_SIGN        &kp HASH    &kp PIPE         &none   &none   &none   &none  &none  &dctbl
-                                              &trans             &trans      &trans           &trans  &trans  &trans
-            >;
         };
     };
 };
