@@ -249,7 +249,7 @@
               &kp H  &kp Q  &kp W         &kp E              &kp DELETE           &none  &none  &none  &none  &none
               &kp Z  &kp A  &kp S         &kp D              &kp P                &none  &none  &none  &none  &none
 &dpm LCTRL U  &kp R  &kp G  &kp C         &kp V              &kp F3               &none  &none  &none  &none  &none  &dctbl
-                            &hl ENTER 10  &dpm LSHIFT SPACE  &dpm LEFT_ALT TAB    &none  &mo 5  &none
+                            &hl ENTER 10  &dpm LSHIFT SPACE  &dpm LEFT_ALT TAB    &mo 6  &mo 5  &mo 7
             >;
         };
 
