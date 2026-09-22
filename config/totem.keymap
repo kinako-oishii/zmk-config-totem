@@ -38,37 +38,37 @@
         lalt {
             bindings = <&kp LALT>;
             key-positions = <10 11>;
-            layers = <0 9>;
+            layers = <0 9 10>;
         };
 
         ralt {
             bindings = <&kp RALT>;
             key-positions = <19 18>;
-            layers = <0 9>;
+            layers = <0 9 10>;
         };
 
         lctl {
             bindings = <&kp LCTRL>;
             key-positions = <11 12>;
-            layers = <0 9>;
+            layers = <0 9 10>;
         };
 
         rctl {
             bindings = <&kp RCTRL>;
             key-positions = <18 17>;
-            layers = <0 9>;
+            layers = <0 9 10>;
         };
 
         lsft {
             bindings = <&kp LSHFT>;
             key-positions = <12 13>;
-            layers = <0 9>;
+            layers = <0 9 10>;
         };
 
         rsft {
             bindings = <&kp RSHFT>;
             key-positions = <17 16>;
-            layers = <0 9>;
+            layers = <0 9 10>;
         };
     };
 
@@ -230,10 +230,20 @@
         gd_editor {
             label = "GD_EDITOR";
             bindings = <
-           &kp H  &kp Q  &kp W       &kp E      &kp DELETE           &none      &none  &none  &none  &none
-           &kp Z  &kp A  &kp S       &kp D      &kp T                &none      &none  &none  &none  &none
-&kp ENTER  &kp R  &kp G  &kp C       &kp V      &kp F3               &none      &none  &none  &none  &none  &none
-                         &kp LSHIFT  &kp LCTRL  &dpm LEFT_ALT TAB    &kp ENTER  &none  &none
+         &kp H  &kp Q  &kp W              &kp E             &kp DELETE           &none  &none            &none  &none  &none
+         &kp Z  &kp A  &kp S              &kp D             &kp T                &none  &none            &none  &none  &none
+&tog 10  &kp R  &kp G  &kp C              &kp V             &kp F3               &none  &none            &none  &none  &none  &none
+                       &dpm LSHIFT ENTER  &dpm LCTRL SPACE  &dpm LEFT_ALT TAB    &none  &lt 5 BACKSPACE  &none
+            >;
+        };
+
+        gd_editor_2 {
+            label = "GD_EDITOR_2";
+            bindings = <
+        &kp H  &kp Q  &kp W              &kp E             &kp DELETE           &none  &none            &none  &none  &none
+        &kp Z  &kp A  &kp S              &kp D             &kp T                &none  &none            &none  &none  &none
+&trans  &kp R  &kp G  &kp C              &kp V             &kp F3               &none  &none            &none  &none  &none  &none
+                      &dpm LSHIFT ENTER  &dpm LCTRL SPACE  &dpm LEFT_ALT TAB    &none  &lt 5 BACKSPACE  &none
             >;
         };
     };
