@@ -230,10 +230,10 @@
         gd_editor {
             label = "GD_EDITOR";
             bindings = <
-        &kp Q          &kp Q     &kp W       &kp E      &kp DELETE      &none  &none  &none  &none  &none
-        &kp Z          &kp A     &kp S       &kp D      &kp T           &none  &none  &none  &none  &none
-&dctbl  &kp LS(LC(Z))  &kp LALT  &none       &kp F5     &kp TAB         &none  &none  &none  &none  &none  &none
-                                 &kp LSHIFT  &kp LCTRL  &kp LEFT_ALT    &none  &none  &none
+           &kp H  &kp Q  &kp W       &kp E      &kp DELETE           &none      &none  &none  &none  &none
+           &kp Z  &kp A  &kp S       &kp D      &kp T                &none      &none  &none  &none  &none
+&kp ENTER  &kp R  &kp G  &kp C       &kp V      &kp F3               &none      &none  &none  &none  &none  &none
+                         &kp LSHIFT  &kp LCTRL  &dpm LEFT_ALT TAB    &kp ENTER  &none  &none
             >;
         };
     };
