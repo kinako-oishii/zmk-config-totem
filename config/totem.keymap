@@ -114,6 +114,16 @@
             #binding-cells = <0>;
             bindings = <&none>, <&to 0>;
         };
+
+        hl: hold_layer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Hold/Layer";
+            bindings = <&kp>, <&tog>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <190>;
+            quick-tap-ms = <170>;
+        };
     };
 
     keymap {
@@ -230,20 +240,20 @@
         gd_editor {
             label = "GD_EDITOR";
             bindings = <
-         &kp H  &kp Q  &kp W              &kp E             &kp DELETE           &none  &none            &none  &none  &none
-         &kp Z  &kp A  &kp S              &kp D             &kp T                &none  &none            &none  &none  &none
-&tog 10  &kp R  &kp G  &kp C              &kp V             &kp F3               &none  &none            &none  &none  &none  &none
-                       &dpm LSHIFT ENTER  &dpm LCTRL SPACE  &dpm LEFT_ALT TAB    &none  &lt 5 BACKSPACE  &none
+              &kp H  &kp Q  &kp W              &kp E             &kp DELETE           &none      &none            &none  &none  &none
+              &kp Z  &kp A  &kp S              &kp D             &kp P                &none      &none            &none  &none  &none
+&hl LCTRL 10  &kp R  &kp G  &kp C              &kp V             &kp F3               &none      &none            &none  &none  &none  &none
+                            &dpm LSHIFT ENTER  &dpm LCTRL SPACE  &dpm LEFT_ALT TAB    &kp ENTER  &lt 5 BACKSPACE  &none
             >;
         };
 
         gd_editor_2 {
             label = "GD_EDITOR_2";
             bindings = <
-        &kp H  &kp Q  &kp W              &kp E             &kp DELETE           &none  &none            &none  &none  &none
-        &kp Z  &kp A  &kp S              &kp D             &kp T                &none  &none            &none  &none  &none
-&trans  &kp R  &kp G  &kp C              &kp V             &kp F3               &none  &none            &none  &none  &none  &none
-                      &dpm LSHIFT ENTER  &dpm LCTRL SPACE  &dpm LEFT_ALT TAB    &none  &lt 5 BACKSPACE  &none
+        &kp SLASH  &kp ASTERISK     &kp RIGHT_BRACKET          &kp SQT           &kp SEMICOLON        &none  &none            &none  &none  &none
+        &kp COLON  &kp N            &kp M                      &kp PERIOD        &kp T                &none  &none            &none  &none  &none
+&trans  &kp TILDE  &kp EXCLAMATION  &kp AT_SIGN                &kp HASH          &kp PIPE             &none  &none            &none  &none  &none  &none
+                                    &dpm LSHIFT RIGHT_BRACKET  &dpm LCTRL SPACE  &dpm LEFT_ALT TAB    &none  &lt 5 BACKSPACE  &none
             >;
         };
     };
