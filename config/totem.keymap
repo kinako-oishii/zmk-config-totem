@@ -246,10 +246,10 @@
         gd_editor {
             label = "GD_EDITOR";
             bindings = <
-              &kp H  &kp Q  &kp W         &kp E              &kp DELETE           &none  &none  &none  &none  &none
-              &kp Z  &kp A  &kp S         &kp D              &kp P                &none  &none  &none  &none  &none
-&dpm LCTRL U  &kp R  &kp G  &kp C         &kp V              &kp F3               &none  &none  &none  &none  &none  &dctbl
-                            &hl ENTER 10  &dpm LSHIFT SPACE  &dpm LEFT_ALT TAB    &mo 6  &mo 5  &mo 7
+               &kp H  &kp Q  &kp W         &kp E             &kp DELETE           &none  &none  &none  &none  &none
+               &kp Z  &kp A  &kp S         &kp D             &kp P                &none  &none  &none  &none  &none
+&dpm LSHIFT U  &kp R  &kp G  &kp C         &kp V             &kp F3               &none  &none  &none  &none  &none  &dctbl
+                             &hl ENTER 10  &dpm LCTRL SPACE  &dpm LEFT_ALT TAB    &mo 6  &mo 5  &mo 7
             >;
         };
 
@@ -258,7 +258,7 @@
             bindings = <
                   &kp SLASH  &kp ASTERISK     &kp RIGHT_BRACKET  &kp SQT     &kp SEMICOLON    &none   &none   &none   &none  &none
                   &kp COLON  &kp N            &kp M              &kp PERIOD  &kp T            &none   &none   &none   &none  &none
-&dpm LCTRL CARET  &kp TILDE  &kp EXCLAMATION  &kp AT_SIGN        &kp HASH    &kp PIPE         &none   &none   &none   &none  &none  &dctbl
+&dpm LSHFT CARET  &kp TILDE  &kp EXCLAMATION  &kp AT_SIGN        &kp HASH    &kp PIPE         &none   &none   &none   &none  &none  &dctbl
                                               &trans             &trans      &trans           &trans  &trans  &trans
             >;
         };
