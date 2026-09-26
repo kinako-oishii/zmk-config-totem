@@ -154,10 +154,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                                                &kp Q             &kp W        &kp F         &kp P         &kp B         &kp J         &kp L             &kp U          &kp Y        &kp SINGLE_QUOTE
-                                                &dpm LEFT_META A  &dpm LALT R  &dpm LCTRL S  &dpm LSHFT T  &kp G         &kp M         &dpm RSHFT N      &dpm RCTRL E   &dpm RALT I  &dpm RIGHT_META O
-&dpm LS(LA(LC(LEFT_META))) LANG_ZENKAKUHANKAKU  &dpl 5 Z          &kp X        &kp C         &kp D         &kp V         &kp K         &kp H             &kp COMMA      &kp DOT      &dpl 5 SLASH       &kp RS(RA(RC(RIGHT_META)))
-                                                                               &dpl 6 ESC    &dpl 3 SPACE  &dpl 4 TAB    &dpl 8 ENTER  &dpl 7 BACKSPACE  &dpl 9 DELETE
+                                                 &kp Q             &kp W        &kp F         &kp P         &kp B         &kp J         &kp L             &kp U          &kp Y        &kp SINGLE_QUOTE
+                                                 &dpm LEFT_META A  &dpm LALT R  &dpm LCTRL S  &dpm LSHFT T  &kp G         &kp M         &dpm RSHFT N      &dpm RCTRL E   &dpm RALT I  &dpm RIGHT_META O
+&dpm LA(LC(LG(LEFT_SHIFT))) LANG_ZENKAKUHANKAKU  &dpl 5 Z          &kp X        &kp C         &kp D         &kp V         &kp K         &kp H             &kp COMMA      &kp DOT      &dpl 5 SLASH       &kp RA(RC(RG(RIGHT_SHIFT)))
+                                                                                &dpl 6 ESC    &dpl 3 SPACE  &dpl 4 TAB    &dpl 8 ENTER  &dpl 7 BACKSPACE  &dpl 9 DELETE
             >;
         };
 
@@ -184,29 +184,29 @@
         navigation {
             label = "NAV";
             bindings = <
-                           &none          &none         &none      &none           &none    &kp K_REDO  &kp K_PASTE    &kp K_COPY     &kp K_CUT    &kp K_UNDO
-                           &kp LEFT_META  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &none    &kp LEFT    &kp DOWN       &kp UP         &kp RIGHT    &kp CAPSLOCK
-&kp LS(LA(LC(LEFT_META)))  &none          &none         &none      &none           &none    &kp INS     &kp HOME       &kp PAGE_DOWN  &kp PAGE_UP  &kp END       &none
-                                                        &none      &none           &none    &kp ENTER   &kp BACKSPACE  &kp DELETE
+                            &none          &none         &none      &none           &none    &kp K_REDO  &kp K_PASTE    &kp K_COPY     &kp K_CUT    &kp K_UNDO
+                            &kp LEFT_META  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &none    &kp LEFT    &kp DOWN       &kp UP         &kp RIGHT    &kp CAPSLOCK
+&kp LA(LC(LG(LEFT_SHIFT)))  &none          &none         &none      &none           &none    &kp INS     &kp HOME       &kp PAGE_DOWN  &kp PAGE_UP  &kp END       &none
+                                                         &none      &none           &none    &kp ENTER   &kp BACKSPACE  &kp DELETE
             >;
         };
 
         mouse {
             label = "MOUSE";
             bindings = <
-                           &none          &none         &none      &none           &none    &kp K_REDO       &kp K_PASTE     &kp K_COPY    &kp K_CUT        &kp K_UNDO
-                           &kp LEFT_META  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &none    &mmv MOVE_LEFT   &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none
-&kp LS(LA(LC(LEFT_META)))  &none          &none         &none      &none           &none    &msc SCRL_RIGHT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none       &none
-                                                        &none      &none           &none    &mkp RCLK        &mkp LCLK       &mkp MCLK
+                            &none          &none         &none      &none           &none    &kp K_REDO       &kp K_PASTE     &kp K_COPY    &kp K_CUT        &kp K_UNDO
+                            &kp LEFT_META  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &none    &mmv MOVE_LEFT   &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none
+&kp LA(LC(LG(LEFT_SHIFT)))  &none          &none         &none      &none           &none    &msc SCRL_RIGHT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none       &none
+                                                         &none      &none           &none    &mkp RCLK        &mkp LCLK       &mkp MCLK
             >;
         };
 
         button {
             bindings = <
-                           &kp K_UNDO     &kp K_CUT     &kp K_COPY  &kp K_PASTE     &kp K_REDO    &kp K_REDO  &kp K_PASTE      &kp K_COPY  &kp K_CUT      &kp K_UNDO
-                           &kp LEFT_META  &kp LEFT_ALT  &kp LCTRL   &kp LEFT_SHIFT  &none         &none       &kp RIGHT_SHIFT  &kp RCTRL   &kp RIGHT_ALT  &kp RIGHT_META
-&kp LS(LA(LC(LEFT_META)))  &kp K_UNDO     &kp K_CUT     &kp K_COPY  &kp K_PASTE     &kp K_REDO    &kp K_REDO  &kp K_PASTE      &kp K_COPY  &kp K_CUT      &kp K_UNDO      &kp RS(RA(RC(RIGHT_META)))
-                                                        &mkp MCLK   &mkp LCLK       &mkp RCLK     &mkp RCLK   &mkp LCLK        &mkp MCLK
+                            &kp K_UNDO     &kp K_CUT     &kp K_COPY  &kp K_PASTE     &kp K_REDO    &kp K_REDO  &kp K_PASTE      &kp K_COPY  &kp K_CUT      &kp K_UNDO
+                            &kp LEFT_META  &kp LEFT_ALT  &kp LCTRL   &kp LEFT_SHIFT  &none         &none       &kp RIGHT_SHIFT  &kp RCTRL   &kp RIGHT_ALT  &kp RIGHT_META
+&kp LA(LC(LG(LEFT_SHIFT)))  &kp K_UNDO     &kp K_CUT     &kp K_COPY  &kp K_PASTE     &kp K_REDO    &kp K_REDO  &kp K_PASTE      &kp K_COPY  &kp K_CUT      &kp K_UNDO      &kp RA(RC(RG(RIGHT_SHIFT)))
+                                                         &mkp MCLK   &mkp LCLK       &mkp RCLK     &mkp RCLK   &mkp LCLK        &mkp MCLK
             >;
 
             label = "BUT";
@@ -215,10 +215,10 @@
         media {
             label = "MEDIA";
             bindings = <
-                           &none          &none         &none      &none           &none    &rgb_ug RGB_TOG  &rgb_ug RGB_EFF    &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI
-                           &kp LEFT_META  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &none    &kp C_PREVIOUS   &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_NEXT       &ext_power EP_TOG
-&kp LS(LA(LC(LEFT_META)))  &none          &none         &none      &none           &none    &out OUT_TOG     &bt BT_SEL 0       &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3       &none
-                                                        &none      &none           &none    &kp C_STOP       &kp C_PLAY_PAUSE   &kp C_MUTE
+                            &none          &none         &none      &none           &none    &rgb_ug RGB_TOG  &rgb_ug RGB_EFF    &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI
+                            &kp LEFT_META  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &none    &kp C_PREVIOUS   &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_NEXT       &ext_power EP_TOG
+&kp LA(LC(LG(LEFT_SHIFT)))  &none          &none         &none      &none           &none    &out OUT_TOG     &bt BT_SEL 0       &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3       &none
+                                                         &none      &none           &none    &kp C_STOP       &kp C_PLAY_PAUSE   &kp C_MUTE
             >;
         };
 
@@ -227,7 +227,7 @@
             bindings = <
          &kp LEFT_BRACKET  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp RIGHT_BRACKET    &none  &none            &none      &none          &none
          &kp SEMICOLON     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp EQUAL            &none  &kp RIGHT_SHIFT  &kp RCTRL  &kp RIGHT_ALT  &kp RIGHT_META
-&kp ESC  &kp GRAVE         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp BACKSLASH        &none  &none            &none      &none          &none           &kp RS(RA(RC(RIGHT_META)))
+&kp ESC  &kp GRAVE         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp BACKSLASH        &none  &none            &none      &none          &none           &kp RA(RC(RG(RIGHT_SHIFT)))
                                          &kp PERIOD    &kp NUMBER_0  &kp MINUS            &none  &none            &none
             >;
         };
@@ -237,7 +237,7 @@
             bindings = <
          &kp LEFT_BRACE  &kp AMPERSAND    &kp ASTERISK          &kp LEFT_PARENTHESIS   &kp RIGHT_BRACE    &none  &none            &none      &none          &none
          &kp COLON       &kp DOLLAR       &kp PERCENT           &kp CARET              &kp PLUS           &none  &kp RIGHT_SHIFT  &kp RCTRL  &kp RIGHT_ALT  &kp RIGHT_META
-&kp ESC  &kp TILDE       &kp EXCLAMATION  &kp AT_SIGN           &kp POUND              &kp PIPE           &none  &none            &none      &none          &none           &kp RS(RA(RC(RIGHT_META)))
+&kp ESC  &kp TILDE       &kp EXCLAMATION  &kp AT_SIGN           &kp POUND              &kp PIPE           &none  &none            &none      &none          &none           &kp RA(RC(RG(RIGHT_SHIFT)))
                                           &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE     &none  &none            &none
             >;
         };
@@ -247,7 +247,7 @@
             bindings = <
          &kp F12  &kp F7  &kp F8     &kp F9     &kp PSCRN          &none  &none            &none      &none          &none
          &kp F11  &kp F4  &kp F5     &kp F6     &kp SCROLLLOCK     &none  &kp RIGHT_SHIFT  &kp RCTRL  &kp RIGHT_ALT  &kp RIGHT_META
-&kp ESC  &kp F10  &kp F1  &kp F2     &kp F3     &kp PAUSE_BREAK    &none  &none            &none      &none          &none           &kp RS(RA(RC(RIGHT_META)))
+&kp ESC  &kp F10  &kp F1  &kp F2     &kp F3     &kp PAUSE_BREAK    &none  &none            &none      &none          &none           &kp RA(RC(RG(RIGHT_SHIFT)))
                           &kp K_APP  &kp SPACE  &kp TAB            &none  &none            &none
             >;
         };
