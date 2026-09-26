@@ -73,7 +73,7 @@
 
         to_editor {
             bindings = <&to 1>;
-            key-positions = <32 33 34 35 36 37>;
+            key-positions = <32 33 34>;
             layers = <0>;
         };
     };
