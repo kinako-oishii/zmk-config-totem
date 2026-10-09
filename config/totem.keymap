@@ -73,7 +73,7 @@
 
         to_editor {
             bindings = <&to 1>;
-            key-positions = <32 33 34>;
+            key-positions = <3 2 1 0>;
             layers = <0>;
         };
     };
@@ -100,7 +100,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <190>;
             quick-tap-ms = <170>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
         };
 
         dpl: doubletap_passthrough_layer {
