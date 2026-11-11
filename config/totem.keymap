@@ -175,10 +175,10 @@
         gd_editor {
             label = "GD_EDITOR";
             bindings = <
-               &kp H  &kp Q  &kp W        &kp E             &kp DELETE           &none  &none  &none  &none  &none
-               &kp Z  &kp A  &kp S        &kp D             &kp P                &none  &none  &none  &none  &none
-&dpm LSHIFT U  &kp R  &kp G  &kp C        &kp V             &kp F3               &none  &none  &none  &none  &none  &dctbl
-                             &hl ENTER 2  &dpm LCTRL SPACE  &dpm LEFT_ALT TAB    &mo 8  &mo 7  &mo 9
+               &kp H  &kp Q  &kp W        &kp E             &kp DELETE           &none  &none             &none  &none  &none
+               &kp Z  &kp A  &kp S        &kp D             &kp P                &none  &none             &none  &none  &none
+&dpm LSHIFT U  &kp R  &kp G  &kp C        &kp V             &kp F3               &none  &none             &none  &none  &none  &dctbl
+                             &hl ENTER 2  &dpm LCTRL SPACE  &dpm LEFT_ALT TAB    &mo 8  &dpl 7 BACKSPACE  &mo 9
             >;
         };
 
